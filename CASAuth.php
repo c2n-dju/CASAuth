@@ -156,8 +156,7 @@ function casLogin($user) {
                         if ($returnto) {
                           $target = Title::newFromText($returnto);
                           if ($target) {
-                            //action=purge is used to purge the cache
-                            $wgOut->redirect($target->getFullUrl('action=purge'));
+                            $wgOut->redirect($target->getFullUrl());
                           }
                         }
                 }
